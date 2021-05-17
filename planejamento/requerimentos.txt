@@ -1,0 +1,26 @@
+Requerimentos Hospital:
+
+Funcionais
+-----------
+O sistema deve:
+- conter uma lista de pacientes e funcionários
+- ter um sistema de login
+- ter um nível de acesso hierárquico
+- permitir que os gerentes (?) naveguem entre os dados do hospital
+- permitir que administradores cadastrem funcionários
+- permitir que médicos vejam suas agendas
+- permitir que funcionários vejam suas agendas (dentro do contexto de suas funções)
+- permitir que cadastrados marquem suas próprias consultas
+- permitir que cadastrados vejam suas consultas agendadas
+- permitir que cadastrados dêem feedbacks
+-----------
+
+Não funcionais
+-----------
+O sistema deve ser:
+- intuitivo de usar
+- atualizável
+- responsivo
+- usável em desktops
+- usável em dispositivos móveis
+-----------
