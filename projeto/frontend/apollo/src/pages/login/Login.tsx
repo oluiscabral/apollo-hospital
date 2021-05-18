@@ -5,8 +5,9 @@ import './styles.css'
 export default class Login extends React.Component {
     render() {
         return (
-            <div className="Login">
-                <div className="main_container">
+            <div id="login">
+
+                <div className="container">
 
                     <div className="form_wrapper">
                         <form name="login_form" id="login_form" action="" method="post">
@@ -32,6 +33,7 @@ export default class Login extends React.Component {
                     <button type="submit" onClick={submitForm}>Entrar</button>
 
                 </div>
+
             </div>
         );
     }
