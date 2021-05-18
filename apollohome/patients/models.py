@@ -10,3 +10,6 @@ class Paciente(models.Model):
     cpf = models.CharField(max_length=14, unique=True)
     atend_desc = models.CharField(max_length=500)
     profResponsavel = models.OneToOneField(Profissional, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nome

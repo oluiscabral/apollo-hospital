@@ -3,8 +3,51 @@
     height: 100%;
     display: block;
     background-color: aqua;
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 body {
-    background-color: blueviolet;
+  margin: 0;
+  padding:0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: blueviolet;
 }
+
+nav {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+
+.headerContainer {
+    background-color: white;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    box-shadow: 0px 1px 8px grey; 
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    background-color:green;
+  }
+  
+.dropdown__content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+
+.dropdown__button:hover {
+  display:block;
+}
+

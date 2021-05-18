@@ -1,9 +1,8 @@
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls.static import static
-from django.conf import settings
+from professionals.views import dashboard_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('patients/', include('patients.urls'), name='patients')
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('', dashboard_view, name='home')
+]
