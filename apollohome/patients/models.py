@@ -1,5 +1,5 @@
 from django.db import models
-from professionals.model import Profissional
+from professionals.models import Profissional
 
 # Create your models here.
 class Paciente(models.Model):
