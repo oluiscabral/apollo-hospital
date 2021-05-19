@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Profissional(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50)
     espec_choices = (
         ('Cirurgião', 'Cirurgião'),

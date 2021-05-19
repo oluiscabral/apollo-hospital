@@ -3,7 +3,7 @@ from professionals.models import Profissional
 
 
 class Paciente(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     nome = models.CharField(max_length=50)
     idade = models.IntegerField(null=True)
     estado_atendimento = models.BooleanField(default=False)
