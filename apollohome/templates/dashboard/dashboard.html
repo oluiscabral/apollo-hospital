@@ -40,11 +40,12 @@
                         <i class="fas fa-plus"></i>
                         <a>adicionar novo</a>
                     </button>
-                    <button class="dropdown__button" onclick="toggleDropdownContentVisibility('profissionais_dropdown')">
+                    <button class="dropdown__button"
+                        onclick="toggleDropdownContentVisibility('profissionais_dropdown')">
                         <a>PROFISSIONAIS</a>
                         <i class="fas fa-caret-down"></i>
                     </button>
-                    <div id="profissionais_dropdown" class="dropdown__content">
+                    <div id="profissionais_dropdown" class="dropdown__content hide">
                         <table class='presentation'>
                             <tr>
                                 <th> ID </th>
@@ -58,7 +59,8 @@
                                 <td> {{profissional.nome}} </td>
                                 <td> {{profissional.cpf}} </td>
                                 <td> {{profissional.especialidade}} </td>
-                                {% endfor %}
+                            </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>
@@ -72,7 +74,7 @@
                         <a>PACIENTES</a>
                         <i class="fas fa-caret-down"></i>
                     </button>
-                    <div id="pacientes_dropdown" class="dropdown__content">
+                    <div id="pacientes_dropdown" class="dropdown__content hide">
                         <table class='presentation'>
                             <tr>
                                 <th> ID </th>
@@ -91,7 +93,8 @@
                                     NÃO ATENDIDO
                                     {% endif %}
                                 </td>
-                                {% endfor %}
+                            </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>
@@ -101,7 +104,7 @@
                         <a>ANDARES</a>
                         <i class="fas fa-caret-down"></i>
                     </button>
-                    <div id="andares_dropdown" class="dropdown__content">
+                    <div id="andares_dropdown" class="dropdown__content hide">
                         <table class='presentation'>
                             <tr>
                                 <th> NÚMERO </th>
@@ -113,7 +116,8 @@
                                 <td> {{andar.numero_andar}} </td>
                                 <td> {{andar.leitos_totais}} </td>
                                 <td> {{andar.leitos_ocupados}} </td>
-                                {% endfor %}
+                            </tr>
+                            {% endfor %}
                         </table>
                     </div>
                 </div>
