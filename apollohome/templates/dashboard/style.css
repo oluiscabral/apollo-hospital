@@ -17,7 +17,7 @@ body {
 .main-wrapper {
   width: 1300px;
   display: block;
-  background-color: aqua;
+  background-color:#E5E5E5;
   margin: 40px auto;
 }
 
@@ -42,7 +42,7 @@ header .logo-wrapper {
 
 header .logo-wrapper img {
   width: 12em;
-  height: 7em;
+  height: 9em;
 }
 
 header .account {
@@ -63,17 +63,34 @@ nav {
 .dropdown {
   display: flex;
   flex-direction: column;
-  background-color: green;
+  /* background-color: green; */
+  margin: 50px;
 }
 
 .dropdown__add-item-button {
   width: 150px;
   font-family: 'Poppins';
+  font-weight: bold;
+  color: white;
+  background-color: #1FA4C1;
+  margin: 5px;
+  border: transparent;
+  cursor: pointer;
 }
 
 .dropdown__add-item-button a {
   margin-left: 5px;
   text-transform: uppercase;
+}
+
+.dropdown__button {
+  height: 50px;
+  font-weight: bold;
+  font-size: 30px;
+  width: 550px;
+  border: transparent;
+  background-color: #C4C4C4;
+  cursor: pointer;
 }
 
 .dropdown__content {
