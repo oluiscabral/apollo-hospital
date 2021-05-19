@@ -6,73 +6,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo Hospital</title>
+
     {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/apollo-logo.png' %}" type='image/png' />
+
+    <link rel="stylesheet" href="{% static 'font-face.css' %}">
+
     <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
-    <link rel="shortcut icon" href="{% static "images/apollo-logo.png" %}" type='image/png' />
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">  
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/all.min.css' %}">
 </head>
 
 <body>
 
     <div class="main-wrapper">
-        <div class='headerContainer'> 
-            <div onclick="location.href='/';" style="cursor: pointer;">
-            </div>    
-            <div class='options'>
-                {{user.name}}
+
+        <header>
+            <div class="logo-wrapper" onclick="location.href='/';" style="cursor: pointer;">
+                <img src="{% static 'images/apollo-logo.png' %}" alt="">
             </div>
-        </div>
+            <div class='account'>
+                <h2 class="account__name">Fulano</h2>
+            </div>
+        </header>
 
         <main>
 
             <nav>
 
                 <div class="dropdown">
-                    <button class="dropdown__add-item-button">adicionar novo</button>
+                    <button class="dropdown__add-item-button">
+                        <i class="fas fa-plus"></i>
+                        <a>adicionar novo</a>
+                    </button>
                     <button class="dropdown__button">profissionais</button>
                     <div class="dropdown__content">
                         <table class='presentation'>
-                        <tr>
-                            <th> ID </th>
-                            <th> NOME </th>
-                            <th> CPF </th>
-                            <th> ESPECIALIDADE </th>
-                        </tr>
-                        {% for profissional in lista_profissionais %}
-                        <tr>
-                            <td> {{profissional.id}} </td>
-                            <td> {{profissional.nome}} </td>
-                            <td> {{profissional.cpf}} </td>
-                            <td> {{profissional.especialidade}} </td>
-                        {% endfor %}
+                            <tr>
+                                <th> ID </th>
+                                <th> NOME </th>
+                                <th> CPF </th>
+                                <th> ESPECIALIDADE </th>
+                            </tr>
+                            {% for profissional in lista_profissionais %}
+                            <tr>
+                                <td> {{profissional.id}} </td>
+                                <td> {{profissional.nome}} </td>
+                                <td> {{profissional.cpf}} </td>
+                                <td> {{profissional.especialidade}} </td>
+                                {% endfor %}
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="dropdown">
                     <button class="dropdown__add-item-button">adicionar novo</button>
-                    <button class="dropdown__button">Pacientes</button>
+                    <button class="dropdown__button">pacientes</button>
                     <div class="dropdown__content">
                         <table class='presentation'>
-                        <tr>
-                            <th> ID </th>
-                            <th> NOME </th>
-                            <th> CPF </th>
-                            <th> ESTÁ ATENDIDO? </th>
-                        </tr>
-                        {% for paciente in lista_pacientes %}
-                        <tr>
-                            <td> {{paciente.id}} </td>
-                            <td> {{paciente.nome}} </td>
-                            <td> {{paciente.cpf}} </td>
-                            <td> {% if paciente.estado_atend == True %}
+                            <tr>
+                                <th> ID </th>
+                                <th> NOME </th>
+                                <th> CPF </th>
+                                <th> ESTÁ ATENDIDO? </th>
+                            </tr>
+                            {% for paciente in lista_pacientes %}
+                            <tr>
+                                <td> {{paciente.id}} </td>
+                                <td> {{paciente.nome}} </td>
+                                <td> {{paciente.cpf}} </td>
+                                <td> {% if paciente.estado_atend == True %}
                                     ATENDIDO
-                                 {% else %}
+                                    {% else %}
                                     NÃO ATENDIDO
-                                 {% endif %}
-                            </td>
-                        {% endfor %}
+                                    {% endif %}
+                                </td>
+                                {% endfor %}
                         </table>
                     </div>
                 </div>
@@ -81,17 +89,17 @@
                     <button class="dropdown__button">Andares</button>
                     <div class="dropdown__content">
                         <table class='presentation'>
-                        <tr>
-                            <th> NÚMERO </th>
-                            <th> LEITOS </th>
-                            <th> LEITOS OCUPADOS </th>
-                        </tr>
-                        {% for andar in lista_andares %}
-                        <tr>
-                            <td> {{andar.numero_andar}} </td>
-                            <td> {{andar.leitos_totais}} </td>
-                            <td> {{andar.leitos_ocupados}} </td>
-                        {% endfor %}
+                            <tr>
+                                <th> NÚMERO </th>
+                                <th> LEITOS </th>
+                                <th> LEITOS OCUPADOS </th>
+                            </tr>
+                            {% for andar in lista_andares %}
+                            <tr>
+                                <td> {{andar.numero_andar}} </td>
+                                <td> {{andar.leitos_totais}} </td>
+                                <td> {{andar.leitos_ocupados}} </td>
+                                {% endfor %}
                         </table>
                     </div>
                 </div>
