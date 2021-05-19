@@ -91,6 +91,11 @@ nav {
   border: transparent;
   background-color: #C4C4C4;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 23px;
 }
 
 .dropdown__content {
