@@ -63,7 +63,6 @@ nav {
 .dropdown {
   display: flex;
   flex-direction: column;
-  /* background-color: green; */
   margin: 50px;
 }
 
