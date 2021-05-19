@@ -2,6 +2,7 @@ from django.shortcuts import render
 from patients.models import Paciente
 from floors.models import Andar
 from .models import Profissional
+from .forms import ProfissionalForm
 # Create your views here.
 
 def dashboard_view(request):
@@ -19,3 +20,18 @@ def dashboard_view(request):
     }
 
     return render(request, '../templates/dashboard/dashboard.html', context)
+
+
+def professionalCreate_view(request):
+    
+    if request.method == 'POST':
+        form = ProfissionalForm(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    form = ProfissionalForm()
+
+    context = {
+        'form': form
+    }   
+    return render(request,'index/index.html', context)
