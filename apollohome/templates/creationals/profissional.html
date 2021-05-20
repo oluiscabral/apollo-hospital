@@ -26,18 +26,29 @@
                 <img src="{% static 'images/apollo-logo.png' %}" alt="">
             </div>
             <div class='account'>
-                <h2 class="account__name">{{user.name}}Fulano</h2>
+                <h2 class="account__name">{{user.name}}</h2>
             </div>
         </header>
 
         <main>
             <p class='title'> CADASTRE UM NOVO PROFISSIONAL / </p>
             <div class='forms'>
-                TESTE
-                {{form.nome}}
+                <form method='POST' class=''>
+                    {% csrf_token %}
+                    <label for='{{form.nome}}'>Nome:</label>
+                    <br>
+                    {{form.nome}}
+                    <br>
+                    <label for='{{form.cpf}}'>CPF:</label>
+                    <br>
+                    {{form.cpf}}
+                    <br>
+                    <label for='{{form.especialidade}}'>Especialidade:</label>
+                    <br>
+                    {{form.especialidade}}
+                    <input type="submit" value="Enviar" />
+                </form>
             </div>
-
-
         </main>
 
     </div>

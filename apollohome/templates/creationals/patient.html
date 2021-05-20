@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo Hospital</title>
+
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'images/apollo-logo.png' %}" type='image/png' />
+
+    <link rel="stylesheet" href="{% static 'font-face.css' %}">
+
+    <link rel="stylesheet" href="{% static 'dashboard/style.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/font-awesome/all.min.css' %}">
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <header>
+            <div class="logo-wrapper" onclick="location.href='/';" style="cursor: pointer;">
+                <img src="{% static 'images/apollo-logo.png' %}" alt="">
+            </div>
+            <div class='account'>
+                <h2 class="account__name">{{user.name}}</h2>
+            </div>
+        </header>
+
+        <main>
+            <p class='title'> CADASTRE UM NOVO PACIENTE </p>
+            <div class='forms'>
+                <form method='POST' class='formsForm'>
+                    {% csrf_token %}
+                    <label for='{{form.nome}}'>Nome:</label>
+                    <br>
+                    {{form.nome}}
+                    <br>
+                    <label for='{{form.cpf}}'>CPF:</label>
+                    <br>
+                    {{form.cpf}}
+                    <br>
+                    <label for='{{form.idade}}'>IDADE:</label>
+                    <br>
+                    {{form.idade}}
+                    <br>
+                    <br>
+                    <label for='{{form.idade}}'>ESTADO ATENDIMENTO:</label>
+                    <br>
+                    {{form.estado_atendimento}}
+                    <br>
+                    <br>
+                    <label for='{{form.idade}}'>DESCRIÇÃO ATENDIMENTO:</label>
+                    <br>
+                    {{form.atend_desc}}
+                    <br>
+                    <br>
+                    <label for='{{form.idade}}'>PROFISSIONAL RESPONSÁVEL:</label>
+                    <br>
+                    {{form.profResponsavel}}
+                    <br>
+                    <br>
+                    <input type="submit" value="Enviar" />
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+</body>
+
+</html>

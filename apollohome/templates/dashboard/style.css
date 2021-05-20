@@ -10,7 +10,7 @@ html {
 
 body {
   display: block;
-  background-color: blueviolet;
+  background-color: #c4c4c4;
   font-family: 'Poppins', Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -19,6 +19,7 @@ body {
   display: block;
   background-color: #E5E5E5;
   margin: 40px auto;
+  border-radius: 0 0 4px 4px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -34,6 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 0px 1px 8px grey;
+  border-radius: 4px 4px 0 0;
 }
 
 header .logo-wrapper {
@@ -51,6 +53,7 @@ header .account {
 
 main {
   padding: 30px;
+  display:flex;
 }
 
 nav {
@@ -58,13 +61,15 @@ nav {
   flex-direction: column;
   width: 550px;
   font-family: 'Poppins';
+  background-color: #708090;
+  padding:20px;
 }
 
 .dropdown {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 50px;
+  margin-bottom:40px;
 }
 
 .dropdown__add-item-button {
@@ -73,7 +78,7 @@ nav {
   font-weight: bold;
   color: white;
   background-color: #1FA4C1;
-  margin: 5px;
+  margin-bottom: 5px;
   border: transparent;
   cursor: pointer;
 }
@@ -87,7 +92,7 @@ nav {
   height: 50px;
   font-weight: bold;
   font-size: 30px;
-  width: 550px;
+  width: 100%;
   border: transparent;
   background-color: #C4C4C4;
   cursor: pointer;
@@ -129,4 +134,51 @@ nav {
 
 .hide {
   display: none;
+}
+
+label{
+  font-size: 15px;
+  font-weight: bold;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.buttonC a{
+  color: white;
+}
+
+
+section {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:50%;
+}
+
+.info-leitos{
+  width: 26rem;
+  height: 19rem;
+  border: 4px solid black;
+  text-align: center;
+}
+
+.info-leitos p{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.regButton {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.regButton a{
+  text-decoration: none;
+}
+
+.regButton a:hover{
+  text-decoration: none;
 }

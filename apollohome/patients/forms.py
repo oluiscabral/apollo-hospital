@@ -13,11 +13,10 @@ class PacienteForm(forms.ModelForm):
             'profResponsavel'
         }
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'nameInput', 'required': True}),
+            'nome': forms.TextInput(attrs={'class': 'nameInput', 'required': True}),
             'cpf': forms.TextInput(attrs={'class': 'cpfInput', 'required': True}),
             'idade': forms.NumberInput(attrs={'class': 'idadeInput', 'required': True}),
             'estado_atendimento': forms.CheckboxInput(attrs={'class': 'estadoInput'}),
-            'atend_desc': forms.TextInput(attrs={'class': 'descInput', 'required': True}),
+            'atend_desc': forms.Textarea(attrs={'class': 'descInput', 'required': True}),
             'profResponsavel': forms.Select(attrs={'class': 'profInput', 'required': True})
-
         }

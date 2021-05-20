@@ -4,6 +4,18 @@ from django.template import loader
 
 from .models import Paciente
 
+from .forms import PacienteForm
 
-def patients(request):
-    return render(request, '../templates/dashboard/dashboard.html', {'table': Paciente.objects.all()})
+def patientsCreate_view(request):
+    
+    if request.method == 'POST':
+        form = PacienteForm(request.POST)
+        if form.is_valid():
+            form.save()
+    
+    form = PacienteForm()
+
+    context = {
+        'form': form
+    }   
+    return render(request,'creationals/patient.html', context)

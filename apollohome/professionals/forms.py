@@ -10,7 +10,7 @@ class ProfissionalForm(forms.ModelForm):
             'especialidade',
         }
         widgets = {
-            'name': forms.TextInput(attrs={'class': 'nameInput', 'required': True}),
+            'nome': forms.TextInput(attrs={'class': 'nameInput', 'required': True}),
             'cpf': forms.TextInput(attrs={'class': 'cpfInput', 'required': True}),
             'especialidade': forms.Select(attrs={'class': 'especInput', 'required': True})
         }

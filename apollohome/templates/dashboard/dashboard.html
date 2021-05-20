@@ -21,13 +21,12 @@
 <body>
 
     <div class="main-wrapper">
-
         <header>
             <div class="logo-wrapper" onclick="location.href='/';" style="cursor: pointer;">
                 <img src="{% static 'images/apollo-logo.png' %}" alt="">
             </div>
             <div class='account'>
-                <h2 class="account__name">{{user.name}}Fulano</h2>
+                <h2 class="account__name">{{user.username}}</h2>
             </div>
         </header>
 
@@ -36,9 +35,9 @@
             <nav>
 
                 <div class="dropdown">
-                    <button class="dropdown__add-item-button">
+                    <button class="dropdown__add-item-button" onclick="window.location.href='create-profissional'">
                         <i class="fas fa-plus"></i>
-                        <a>adicionar novo</a>
+                        <a class='buttonC'>adicionar novo</a>
                     </button>
                     <button class="dropdown__button"
                         onclick="toggleDropdownContentVisibility('profissionais_dropdown')">
@@ -66,9 +65,9 @@
                 </div>
 
                 <div class="dropdown">
-                    <button class="dropdown__add-item-button">
+                    <button class="dropdown__add-item-button" onclick="window.location.href='create-paciente'">
                         <i class="fas fa-plus"></i>
-                        <a>adicionar novo</a>
+                        <a class='buttonC'>adicionar novo</a>
                     </button>
                     <button class="dropdown__button" onclick="toggleDropdownContentVisibility('pacientes_dropdown')">
                         <a>PACIENTES</a>
@@ -124,6 +123,16 @@
 
             </nav>
 
+            <section>
+                <div class="info-leitos">
+                    <h2>LEITOS DISPONÍVEIS</h2>
+                    <p>{{leitos_totais}}</p>
+                    <h2>LEITOS OCUPADOS</h2>
+                    <p>{{leitos_ocupados}}</p>
+                    <h2>PORCENTAGEM DE OCUPAÇÃO</h2>
+                    <p>{{porcentagem}} %</p>
+                </div>
+            </section>
 
         </main>
 
